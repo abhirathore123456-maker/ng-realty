@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | NG Realty Advisory</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0b0b0c;
+      color: #f4f1ec;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .thank-you-container {
+      max-width: 600px;
+      width: 100%;
+      padding: 48px 32px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      background: #131315;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+      animation: fadeIn 0.6s ease;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: scale(0.96); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    .brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #a3a09c;
+      margin-bottom: 20px;
+    }
+
+    .brand span {
+      color: #e3b978;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(36px, 6vw, 52px);
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    h1 .gold {
+      background: linear-gradient(120deg, #ef8c7d, #e3b978);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: #e3b978;
+      margin-bottom: 16px;
+    }
+
+    .message {
+      color: #a3a09c;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+
+    .spinner {
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      border: 3px solid rgba(255, 255, 255, 0.06);
+      border-top: 3px solid #e3b978;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-bottom: 20px;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .redirect-note {
+      font-size: 13px;
+      color: #75726f;
+    }
+
+    .redirect-note strong {
+      color: #f4f1ec;
+      font-weight: 500;
+    }
+
+    .home-link {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 12px 32px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+      color: #f4f1ec;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .home-link:hover {
+      border-color: #e3b978;
+      color: #e3b978;
+      background: rgba(227, 185, 120, 0.06);
+    }
+
+    @media (max-width: 480px) {
+      .thank-you-container {
+        padding: 32px 20px;
+      }
+      h1 {
+        font-size: 30px;
+      }
+      .tagline {
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="thank-you-container">
+    <div class="brand">NG Realty <span>Advisory</span></div>
+
+    <h1>Thank You <span class="gold">for Reaching Out.</span></h1>
+
+    <div class="tagline">Your Search. Our Grace.</div>
+
+    <p class="message">Our Advisor Will Contact You Soon.</p>
+
+    <div class="spinner"></div>
+
+    <p class="redirect-note">
+      Redirecting you to <strong>NG Realty</strong> in <strong id="countdown">5</strong> seconds...
+    </p>
+
+    <a href="https://strict-azure-gt6rpgbr.edgeone.dev/" class="home-link">← Back to Home</a>
+  </div>
+
+  <script>
+    let seconds = 5;
+    const countdownEl = document.getElementById('countdown');
+
+    const interval = setInterval(() => {
+      seconds--;
+      if (countdownEl) {
+        countdownEl.textContent = seconds;
+      }
+      if (seconds <= 0) {
+        clearInterval(interval);
+        window.location.href = 'https://strict-azure-gt6rpgbr.edgeone.dev/';
+      }
+    }, 1000);
+
+    setTimeout(() => {
+      window.location.href = 'https://strict-azure-gt6rpgbr.edgeone.dev/';
+    }, 6000);
+  </script>
+
+</body>
+</html>
